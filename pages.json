@@ -1,0 +1,135 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		}
+		,{
+			"path": "pages/index/index-home",
+			"style": {}
+		}
+	    ,{
+            "path" : "pages/login/login",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "登录",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/register/register",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "注册",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/user",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "用户",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/plugin/demo-ucharts",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "ucharts",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/plugin/statistics",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "数据统计",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/plugin/moment",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "重要时刻",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/statistics-chart/statistics-chart",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "图表",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/statistics-list/statistics-list",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "列表",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/statistics-list/add",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "新增",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/statistics-list/edit",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "编辑",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/statistics-list/detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "详情",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"tabBar": {
+		"color": "#7a7e83",
+		"selectedColor": "#0faeff",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"text": "首页",
+			"iconPath": "static/common/home.png",
+			"selectedIconPath": "static/common/homeHL.png"
+		}, {
+			"pagePath": "pages/user/user",
+			"text": "我的",
+			"iconPath": "static/common/user.png",
+			"selectedIconPath": "static/common/userHL.png"
+		}]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "KK-NC",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	}
+}
