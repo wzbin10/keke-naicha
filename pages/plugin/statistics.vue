@@ -8,10 +8,10 @@
 			    <el-tab-pane label="今年以来" name="second">
 					<statistics-chart  v-bind:params="params"/>
 				</el-tab-pane>
-			    <el-tab-pane label="最近半年" name="third">
+			    <el-tab-pane label="最近三个月" name="third">
 					<statistics-chart  v-bind:params="params"/>
 				</el-tab-pane>
-			    <el-tab-pane label="最近一年" name="fourth">
+			    <el-tab-pane label="最近半年" name="fourth">
 					<statistics-chart  v-bind:params="params"/>
 				</el-tab-pane>
 			</el-tabs>
@@ -58,10 +58,10 @@
 						this.params = {"date":"now"}
 						break;
 					case 'third':
-						this.params = {"date":"half-year"}
+						this.params = {"date":"month"}
 						break;
 					case 'fourth':
-						this.params = {"date":"all-year"}
+						this.params = {"date":"year"}
 						break;
 				}
 			}
@@ -69,12 +69,15 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.content-tabs {
 		padding: 10rpx 5rpx;
 	}
-	.el-tabs__header {
-		margin: 0 0 15px;
+	.tabs /deep/ .el-tabs__header {
+		margin: 0 0 5rpx;
+	}
+	.tabs /deep/ .el-tabs__item {
+		font-size: 18rpx;
 	}
 	.el-card__body {
 		padding: 20rpx 40rpx;

@@ -2,7 +2,7 @@
 	<view>
 		<scroll-view scroll-y class="page">
 			<view class="sub-title">
-				<el-carousel height="200px" :interval="5000">
+				<el-carousel height="380rpx" :interval="5000">
 					<el-carousel-item v-for="item in subtitleBg" :key="item">
 						<image :src="item" mode="widthFix" class="response"></image>
 					</el-carousel-item>
@@ -72,10 +72,10 @@
 	}
 
 	.nav-li {
-		padding: 20rpx;
+		padding: 40rpx 20rpx;
 		border-radius: 12rpx;
-		width: calc(50% - 40px);
-		margin: 0 2.5% 40rpx;
+		width: calc(50% - 60px);
+		margin: 0 10px 40rpx;
 		background-image: url(../../static/assets.png);
 		background-size: cover;
 		background-position: center;

@@ -1,0 +1,24 @@
+{
+  "name": "wzbin10",
+  "version": "1.0.0",
+  "description": "no thing",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wzbin10/keke-naicha.git"
+  },
+  "author": "wzbin10",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wzbin10/keke-naicha/issues"
+  },
+  "homepage": "https://github.com/wzbin10/keke-naicha#readme",
+  "dependencies": {
+    "element-ui": "^2.15.1",
+    "i": "^0.3.6",
+    "npm": "^7.10.0"
+  }
+}

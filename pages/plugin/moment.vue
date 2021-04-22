@@ -1,6 +1,6 @@
 <template>
 	<view class="content">
-		<el-timeline>
+		<el-timeline class="timeline">
 		    <el-timeline-item v-for="(item,index) in timelineItem" :key="item"
 				:timestamp="item.date+' '+item.master" 
 				placement="top">
@@ -123,5 +123,9 @@
 	.content {
 		width: calc(100% - 60rpx);
 		margin: 10rpx 0rpx;
+	}
+	.timeline /deep/ .el-timeline-item__timestamp, 
+	.timeline /deep/ .el-timeline-item__content {
+		font-size: 18px;
 	}
 </style>

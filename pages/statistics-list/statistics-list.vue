@@ -1,16 +1,16 @@
 <template>
 	<view class="content">
 		<el-card class="box-card">
-			<el-table :data="tables" style="width: 100%" height="460" @current-change="handleCurrentChange">
-				<el-table-column fixed prop="date" label="日期" width="100"></el-table-column>
-				<el-table-column prop="name" label="物品" width="120"></el-table-column>
+			<el-table :data="tables" style="width: 100%" height="912" @current-change="handleCurrentChange">
+				<el-table-column fixed prop="date" label="日期" width="150"></el-table-column>
+				<el-table-column prop="name" label="物品" width="260"></el-table-column>
 				<el-table-column prop="price" label="单价" width="80"></el-table-column>
 				<el-table-column prop="number" label="数量" width="80"></el-table-column>
 				<el-table-column prop="total" label="合计"  width="80"></el-table-column>
-				<el-table-column fixed="right" label="操作" width="70">
+				<el-table-column fixed="right" label="操作" width="80">
 					<template slot-scope="scope">
-						<el-button @click="handleEdit(scope.$index, scope.row)" type="text" size="small" icon="el-icon-edit"></el-button>
-						<el-button @click="handleDelete(scope.$index, scope.row)" type="text" size="small" icon="el-icon-delete"></el-button>
+						<el-button @click="handleEdit(scope.$index, scope.row)" type="text" icon="el-icon-edit"></el-button>
+						<el-button @click="handleDelete(scope.$index, scope.row)" type="text" icon="el-icon-delete"></el-button>
 					</template>
 				</el-table-column>
 			</el-table>
@@ -18,10 +18,8 @@
 				@current-change="handleCurrentPageChange"
 				:hide-on-single-page="true"
 				background
-				small
 				:page-size="defaultSize"
-				:pager-count="3"
-			    layout="total,prev,pager,next"
+			    layout="total,pager"
 			    :total="defaultTotal">
 			</el-pagination>
 			  
@@ -44,7 +42,7 @@
 				tables:[],
 				defaultPages:[],
 				currentRow:null,
-				defaultSize:7,
+				defaultSize:13,
 				currentPage:1,
 				defaultTotal:0
 			}
@@ -152,6 +150,12 @@
 	.box-card {
 	    width: calc(100% - 60rpx);
 		margin: 0 0 20rpx 0;
+	}
+	.box-card /deep/ .el-table__header,
+	.box-card /deep/ .el-table__body,
+	.box-card /deep/ .el-table__body,
+	.box-card /deep/ .el-pager .number {
+		font-size: 18rpx;
 	}
 	.page {
 		padding: 20rpx 6rpx 6rpx 6rpx;

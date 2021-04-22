@@ -72,8 +72,8 @@
 		methods: {
 			getJSONByParams(params = this.params){
 				const params_date = params.date == 'now' ? dbCmd.lt(this.format('yyyy-MM-dd')).and(dbCmd.gt(this.format('yyyy-01-01')))
-								: params.date == 'half-year' ? dbCmd.gt(this.format('yyyy-MM-dd',365/2*24*60*60*1000))
-								: params.date == 'all-year' ? dbCmd.gt(this.format('yyyy-MM-dd',365*24*60*60*1000))
+								: params.date == 'month' ? dbCmd.gt(this.format('yyyy-MM-dd',365/4*24*60*60*1000))
+								: params.date == 'year' ? dbCmd.gt(this.format('yyyy-MM-dd',365/2*24*60*60*1000))
 								: dbCmd.lte(this.format('yyyy-MM-dd'));
 				
 				db.collection('daily-table').where({
